@@ -1,33 +1,168 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Spicy+Rice&display=swap");
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#body {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  /* justify-content: center;
+  justify-items: center; */
+  background-color: rgb(21, 21, 83);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.background {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  opacity: 90%;
+  z-index: -999;
+  background-size: cover;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+main {
+  height: 70vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.boton {
+  border: solid 2px white;
+  box-shadow: 2px 2px 6px rgb(136, 238, 245);
+}
+
+.logo {
+  max-width: 550px;
+  margin: 0;
+}
+
+.layout-p {
+  margin: auto;
+  width: 90%;
+  max-height: 300px;
+}
+.fondo {
+  background: white;
+  width: 700px;
+  max-height: 50vh;
+  overflow: scroll;
+}
+
+.caja1 {
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgb(8, 5, 36);
+  margin-bottom: 10px;
+  height: 700px;
+  width: 90%;
+}
+
+.page-p {
+  margin: auto;
+  background-color: rgba(95, 185, 238, 0.849);
+  width: 90%;
+  height: 500px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  box-shadow: 2px 2px 8px rgb(13, 10, 34);
+  border-radius: 10px;
+  font-family: "Amaranth", sans-serif;
+}
+
+.form-p {
+  font-family: "Amaranth", sans-serif;
+  background-color: rgba(48, 115, 240, 0.5);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+.boton-2 {
+  border: 4px solid rgba(233, 119, 12, 0.623);
+  background-color: rgba(48, 115, 240, 0.925);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.boton-2:hover {
+  color: rgba(32, 15, 126, 0.747);
+  background-color: rgb(233, 119, 12);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+.boton-3 {
+  font-family: "Amaranth", sans-serif;
+  width: 300px;
+  font-weight: 700;
+  color: rgba(32, 15, 126, 0.747);
+  background-color: rgb(233, 119, 12);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.boton-3:hover {
+  color: rgba(32, 15, 126, 0.67);
+  background-color: rgba(233, 119, 12, 0.629);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+.boton-volver {
+  border: 4px solid rgba(32, 15, 126, 0.747);
+  color: rgba(32, 15, 126, 0.747);
+  background-color: rgb(233, 119, 12);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 28px;
+  font-family: "Amaranth", sans-serif;
+}
+/* rgba(48, 115, 240, 0.925); */
+.boton-volver:hover {
+  border: none;
+  border: 4px solid rgba(13, 10, 34, 0);
+  background-color: rgba(13, 10, 34, 0.473);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  color: rgb(233, 119, 12);
+}
+.color-texto {
+  color: rgb(20, 13, 83);
+  font-size: 30px;
+  font-weight: 900;
+  box-shadow: 2px 0px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+
+.info-p {
+  width: 100%;
+  background-color: rgba(48, 115, 240, 0.925);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+strong {
+  font-size: 25px;
+}
+
+.info-p:hover {
+  color: rgba(32, 15, 126, 0.747);
+  background-color: rgb(233, 119, 12);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .layout-p {
+    display: block;
+    max-width: 600px;
+    margin: auto;
   }
 }

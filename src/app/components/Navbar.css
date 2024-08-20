@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Spicy+Rice&display=swap");
+
+.navbar {
+  display: flex;
+  font-family: "Amaranth", sans-serif;
+  color: burlywood;
+  height: 36vh;
+  font-weight: 900;
+  font-size: 30px;
+  box-sizing: content-box;
+  text-align: center;
+}
+
+.navbar ul {
+  margin: auto;
+  background-color: rgba(17, 82, 221, 0.521);
+  padding: 35px;
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+.navbar ul li:hover {
+  color: rgba(32, 15, 126, 0.747);
+  text-decoration: none;
+  background-color: rgb(233, 119, 12);
+
+  border-radius: 10px;
+}
+
+.navbar ul li {
+  width: 250px;
+  list-style: none;
+  /* text-decoration: overline; */
+  text-align: center;
+  margin: 5px;
+
+  margin-left: 10px;
+  background-color: rgba(48, 115, 240, 0.925);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+
+.out {
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+  background-color: rgba(48, 115, 240, 0.925);
+  box-shadow: 2px 2px 4px rgb(13, 10, 34);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .figura {
+    display: none;
+  }
+
+  .navbar ul {
+    background-color: rgba(17, 82, 221, 0.521);
+    padding: 35px;
+    box-shadow: 2px 2px 4px rgb(13, 10, 34);
+    border-radius: 10px;
+  }
+  .navbar ul li {
+    text-align: center;
+    margin: 5px;
+  }
+}

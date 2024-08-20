@@ -1,5 +1,5 @@
 {
-  "name": "digitalizacion_albaranes",
+  "name": "m4_case_to_solve_digitalizacion_de_albaranes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "react-hook-form": "^7.52.1"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.9"
   }
 }

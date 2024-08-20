@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+OnBoarding:
 
-## Getting Started
+crear una page que se renderice del lado del cliente, con una funcion que enrute despues de hacer login al dashboard
 
-First, run the development server:
+EJEMPLO:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+"use client";
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+import { useRouter } from "next/navigation";
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+function AboutPage() {
+  const router = useRouter();
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  return (
+    <>
+      <div className="container text-center">
+        <h1 className="bg-indigo-500 mx-auto px-4 p-4 m-4 ">About</h1>
 
-## Learn More
+        <p className="bg-red-500 mx-auto px-4 p-4 m-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, …
+        </p>
 
-To learn more about Next.js, take a look at the following resources:
+        <button
+          className="bg-sky-400 px-3 py-2 rounded-md"
+          onClick={() => {
+            alert("Executing...");
+            router.push("/");
+          }}
+        >
+          Click
+        </button>
+      </div>
+    </>
+  );
+}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+export default AboutPage;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+cuando lleguemos a la parte de agregar clientes, no ha pedido foto, pero probar a meter una foto random de la api random del proyecto de healtylife

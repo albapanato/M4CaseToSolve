@@ -14,5 +14,38 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  theme: {
+    extend: {
+      textShadow: {
+        default: "2px 4px 6px rgb(26, 1, 255)",
+        md: "3px 3px 6px rgba(0, 0, 0, 0.3)",
+        lg: "4px 4px 8px rgba(0, 0, 0, 0.25)",
+        xl: "5px 5px 10px rgba(0, 0, 0, 0.2)",
+        none: "none",
+      },
+    },
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-shadow": {
+          textShadow: "2px 4px 4px rgb(26, 1, 255)",
+        },
+        ".text-shadow-md": {
+          textShadow: "2px 3px 2px rgb(5, 187, 243)",
+        },
+        ".text-shadow-lg": {
+          textShadow: "2px 3px 2px rgb(154, 145, 236)",
+        },
+        ".text-shadow-xl": {
+          textShadow: "2px 2px 2px rgba(255,255,255)",
+        },
+        ".text-shadow-none": {
+          textShadow: "none",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };
